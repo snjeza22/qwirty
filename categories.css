@@ -1,0 +1,30 @@
+/* Let's start with the .categories nav:
+Since the parent of categories is main, and we've set display: flex to main, we can set the flex properties on .categories. Prevent it from growing, prevent it from shrinking, and set the flex basis to 256px.
+Also, let's set the display property to flex, and have it act as a column. This will force the anchor tags inside of it to act as block elements, and to align vertically rather than horizontally.
+Now style the anchor tags in side of the categories. Make sure to be specific enough with your CSS selector to avoid styling anchor tags around the whole page with the rules we create.
+Remove the text-decoration, change the font-family to 'Dosis', and set the text-align to center.
+Buttons generally look good with uppercase text, so give the anchor tags a text-transform.
+They should have a margin-bottom at least so that each tag is separate from each other.
+The background color I used is #44b, but feel free to choose your own. Something dark with a white text color.
+Let's use the :hover pseudo-class to darken the anchor tags, and add a little box shadow when the user hovers over the link. box-shadow: 0 2px 5px -2px black; is a reasonable rule that makes it look like the button is hovering over the page a bit. */
+
+main .categories {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 256px;
+}
+
+nav>a {
+    text-decoration: none;
+    font-family: Dosis;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background-color: #44b;
+    color: white;
+}
+
+a:hover {
+    box-shadow: 0 2px 5px -2px black;
+    color: blueviolet;
+}

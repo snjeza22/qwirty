@@ -1,0 +1,17 @@
+/* Working on the footer itself:
+1,We should set display to flex, and have it flex in a row, so that the child sections will align correctly.
+Give it a background color of #255, or something slightly darker than your links in the categories above.
+Give it a reasonable amount of padding, something like 18px, or 1rem. You want there to be a bit of color above/below the links themselves.
+Continue with the Dosis font in the footer, too.
+2.The sections:
+Give them a margin-right, but also clear the margin-right on the last-child (or last-of-type). That will give them each some breathing room.
+Set their display to flex, and let them flex in a column. This will let us play with the h2 and a tags with ease.
+3.The h2 tag:
+Make it white, give it a white border-bottom, too.
+To make the border-bottom appear as if its floating, give it both some padding and margin on the bottom. This will push it away from the words in the h2 as well as the anchor tags below it.
+Set a smaller font-size, and prepare to set the font-size for the anchor tags a little smaller still.
+Have fun with the letter-spacing property. Add a bit of it to spread out the letters in the headings.
+4.The a tags:
+Again: white, no text-decoration, and bold.
+Give them a margin-bottom, and set a font-size smaller than the h2 tag.
+When hovering over the anchor tag, set a border-bottom of 1px solid white, and also change the margin bottom to be 1px less than the one you set above. This will prevent it from taking up more space. */
