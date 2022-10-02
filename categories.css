@@ -12,6 +12,7 @@ main .categories {
     display: flex;
     flex-direction: column;
     flex-basis: 256px;
+    
 }
 
 main nav > a {
@@ -22,6 +23,7 @@ main nav > a {
     margin-bottom: 1rem;
     background-color: #44b;
     color: white;
+    padding: 0.6rem
 }
 
 main nav a:hover {

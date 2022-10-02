@@ -1,0 +1,115 @@
+/* There's two navs (.main-nav and .sub-nav) in the header: both should flex.
+The main should have a dark background, and should set justify-content to space-between.
+The main nav has two nav-lists: .short-width and .full-width:
+Set .full-width to display: none and .short-width to display: flex
+Add a media query: when min-width is over 768px, and switch the display properties of the two classes above. This will show the menu icon when the screen is narrow, and show the menu items when it is wide.
+For the .nav-list class:
+Set the display to flex, give it a direction of row.
+Have the anchor tags inside get some padding, and a border-right
+Remove the border-right on the last anchor tag. To do this, you'll have to target the last li, like this: .nav-list li:last-of-type a { /* stuff */
+/* Now for the .sub-nav:
+The .search-form should grow to full width, and should itself have a display of flex.
+/* Give the input, and button some styling. You can add padding to both, remove the borders, and give the input a border-bottom equal in color to our color scheme. */
+/* Have the input flex-grow so that the search box is the largest part of the form. */
+/* Lastly, style the .company-name and .credit-offer to match the screen shots as closely as possible */
+
+body header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+body header nav.main-nav {
+    display: flex;
+    flex-direction: row;
+    flex: auto 0 0;
+    background-color: #44b;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+body header nav.main-nav .horizontal:first-of-type {
+    display: flex;
+    flex-direction: row;
+
+}
+
+body header nav.main-nav .horizontal:first-of-type li {
+
+    border-right: solid black 5px;
+    padding: 0.4rem;
+
+}
+
+body header nav.main-nav .horizontal:first-of-type li:last-of-type {
+    border-right: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body header nav.main-nav .horizontal:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+body header nav.main-nav .horizontal:nth-of-type(3) {
+    display: none;
+
+}
+
+@media (min-width: 768px) {
+    body header nav.main-nav .horizontal:nth-of-type(2) {
+        display: none;
+        
+    }
+
+    body header nav.main-nav .horizontal:nth-of-type(3) {
+        display: flex;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+}
+body header nav.sub-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    color: blue;
+    font-size: 32px;
+    margin:1rem;
+    
+}
+
+body header nav.sub-nav .credit-offer {
+    background-color: red;
+    padding: 10px;
+}
+
+
+
+
+
+body header .sub-nav form {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    
+   
+    
+}
+
+body header .sub-nav form input {
+    width: 1200px;
+}
+header .company-name {
+    display: flex;
+    justify-content: center;
+    margin-left: 5rem;
+}

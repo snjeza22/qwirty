@@ -1,44 +1,67 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   
-  body {
-    background: #eee;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  header, footer { 
-    flex: none; 
-  }
-  
-  main {
-    display: flex;
-    flex: 1 0 auto;
-  }
-  main .categories {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 256px;
 }
 
-main  nav > a {
-    text-decoration: none;
-    font-family: Dosis;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    background-color: #44b;
-    color: white;
+body {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 1200px;
+}
+
+header,
+footer {
+  flex: none;
+}
+
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
+  align-content: flex-start;
+}
+
+
+
+
+main .categories {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 256px;
+  padding: 15px;
+ flex-basis: 944px;
+}
+
+main nav>a {
+  text-decoration: none;
+  font-family: Dosis;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background-color: #44b;
+  color: white;
 }
 
 main nav a:hover {
-    box-shadow: 0 2px 5px -2px black;
-    color: blueviolet;
+  box-shadow: 0 2px 5px -2px black;
+  color: blueviolet;
 }
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(25% - 2rem);
+  
+
+}
+
+
+
 footer {
   display: flex;
   flex-direction: row;
@@ -48,17 +71,20 @@ footer {
   font-size: dosis;
   width: auto;
 }
+
 footer section {
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
   width: 200px;
-  
+
 }
+
 footer section .last {
   margin-right: 0;
 }
-footer section > h2 {
+
+footer section>h2 {
   color: white;
   border-bottom: solid white 3px;
   padding-bottom: .3rem;
@@ -66,12 +92,14 @@ footer section > h2 {
   font-size: 14px;
   letter-spacing: 0.3rem;
 }
+
 footer section a {
   font-size: 10px;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
+
 footer section a:hover {
   border-bottom: solid white 1px;
   margin-bottom: 11px;

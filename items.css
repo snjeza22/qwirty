@@ -1,0 +1,79 @@
+/* Starting with .items: */
+/*  
+
+Time for media queries... When the max-width is 768px:
+Inside the media query: set the font-sizes of the sub-classes in the .item card to be larger
+Give the .item card a flex-basis of 100%
+Have the .items flex in a column rather than a row. */
+
+main section.items {
+    
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    font-family: Open Sans;
+    align-items: flex-start;
+    flex-grow: 1;
+   
+   
+}
+main section div.item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 10px;
+    flex-direction: column;
+    box-shadow: 2px 2px gray;
+    margin-right: 1rem;
+    margin-top: 14px;
+}
+main section div .item-name { 
+    background-color: #44b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding: 0.3rem;
+
+}
+main section div .fact-line{
+    display: flex;
+    justify-content: space-between;
+    background-color: #44b;
+    color: white;
+    padding: 0.5rem;
+}
+main section div .item-name span {
+    color: white;
+    font-size: 20px;
+
+}
+main section.items i{
+    background-color: darkblue;
+    border-radius: 50%;
+    padding: 2px;
+    
+    
+}
+main section div .item-description{
+    background-color:rgb(214, 209, 209);
+    padding: 0.5rem;
+}
+@media (max-width: 768px){
+    main section div.item {
+        display: flex;
+        flex-direction: column;
+        font-size: larger;
+        width: 70%;
+    
+        
+    }
+    main section.items {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
